@@ -11,6 +11,8 @@
 		484734C02A291D5100C6510A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484734BF2A291D5100C6510A /* ContentView.swift */; };
 		484734C22A291D5300C6510A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 484734C12A291D5300C6510A /* Assets.xcassets */; };
 		484734C52A291D5300C6510A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 484734C42A291D5300C6510A /* Preview Assets.xcassets */; };
+		484734CC2A291D8A00C6510A /* FaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484734CB2A291D8A00C6510A /* FaceModel.swift */; };
+		484734CE2A291D9D00C6510A /* FrontCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484734CD2A291D9D00C6510A /* FrontCameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		484734BF2A291D5100C6510A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		484734C12A291D5300C6510A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		484734C42A291D5300C6510A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		484734CB2A291D8A00C6510A /* FaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceModel.swift; sourceTree = "<group>"; };
+		484734CD2A291D9D00C6510A /* FrontCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				484734BD2A291D5100C6510A /* SmilingBadgeApp.swift */,
 				484734BF2A291D5100C6510A /* ContentView.swift */,
+				484734CD2A291D9D00C6510A /* FrontCameraViewController.swift */,
+				484734CB2A291D8A00C6510A /* FaceModel.swift */,
 				484734C12A291D5300C6510A /* Assets.xcassets */,
 				484734C32A291D5300C6510A /* Preview Content */,
 			);
@@ -139,6 +145,8 @@
 			files = (
 				484734C02A291D5100C6510A /* ContentView.swift in Sources */,
 				484734BE2A291D5100C6510A /* SmilingBadgeApp.swift in Sources */,
+				484734CC2A291D8A00C6510A /* FaceModel.swift in Sources */,
+				484734CE2A291D9D00C6510A /* FrontCameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +278,7 @@
 				DEVELOPMENT_TEAM = C4W6UUH267;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app will use the front camera to capture the position of your face.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +308,7 @@
 				DEVELOPMENT_TEAM = C4W6UUH267;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app will use the front camera to capture the position of your face.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

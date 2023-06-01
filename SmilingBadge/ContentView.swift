@@ -1,21 +1,38 @@
-// ContentView.swift
-
+import RealityKit
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var frontCameraViewController = FrontCameraViewController()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            FrontCameraView(frontCameraViewController: frontCameraViewController)
+                .edgesIgnoringSafeArea(.all)
+            SmilingBadgeView(isSmiling: frontCameraViewController.faceModel.isSmiling)
         }
-        .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+struct FrontCameraView: UIViewRepresentable {
+    var frontCameraViewController: FrontCameraViewController
+
+    func makeUIView(context _: Context) -> ARView {
+        return frontCameraViewController.view
+    }
+
+    func updateUIView(_: ARView, context _: Context) {}
+}
+
+struct SmilingBadgeView: View {
+    var isSmiling: Bool
+
+    var body: some View {
+        return VStack {
+            Text(isSmiling ? "Smiling 😄" : "Not Smiling 😐")
+                .padding()
+                .foregroundColor(isSmiling ? .green : .red)
+                .background(RoundedRectangle(cornerRadius: 25).fill(.regularMaterial))
+            Spacer()
+        }
     }
 }

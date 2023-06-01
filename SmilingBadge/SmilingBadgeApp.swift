@@ -1,5 +1,3 @@
-// SmilingBadgeApp.swift
-
 import SwiftUI
 
 @main
